@@ -1,46 +1,71 @@
-/* Reset some default styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fdfdfd;
     color: #333;
     line-height: 1.6;
-    padding: 0 20px;
+    padding: 0;
 }
 
-/* Header */
-header {
-    background-color: #f97316;
-    color: white;
-    padding: 30px 0;
-    text-align: center;
+nav {
+    background-color: #c1ca63;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    font-size: 3rem;
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
 }
 
-/* Container */
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffe4cc;
+}
+
 .container {
     max-width: 1000px;
     margin: 40px auto;
+    padding: 0 20px;
 }
 
-/* Recipe Card */
+.container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #c2410c;
+    margin-bottom: 30px;
+}
+
 .recipe-card {
-    background-color: #fff;
+    background-color: #ead9d9;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     padding: 30px;
     margin-bottom: 40px;
-    border-left: 6px solid #f97316;
+    
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .recipe-card h2 {
@@ -69,13 +94,3 @@ li {
     margin-bottom: 8px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .recipe-card {
-        padding: 20px;
-    }
-}
